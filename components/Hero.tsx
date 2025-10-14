@@ -6,7 +6,7 @@ import { heroImages } from '../constants';
 
 const Hero: React.FC = () => {
   return (
-    <div className="relative rounded-lg overflow-hidden shadow-lg">
+    <div className="relative overflow-hidden">
       <ImageSlider images={heroImages} height="h-96 md:h-[450px]" />
       <div className="absolute inset-0 bg-black bg-opacity-30"></div>
       <div className="absolute inset-0 flex items-center justify-center">

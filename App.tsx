@@ -12,10 +12,10 @@ const App: React.FC = () => {
   return (
     <div className="bg-gray-50 min-h-screen font-sans">
       <Header />
+      <Hero />
       <main className="container mx-auto px-4 py-8">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-9">
-            <Hero />
             <AdvertSpace className="my-8 h-24" />
             <PropertyList title="Featured Properties" properties={featuredProperties} />
             <AdvertSpace className="my-8 h-24" />
