@@ -37,7 +37,8 @@ const generateProperties = (startId: number, count: number): Property[] => {
             name: i === 0 && startId === 1 ? 'Lakeside Estate' : 'Modern Family Home',
             beds: i === 0 && startId === 1 ? 3 : Math.floor(Math.random() * 3) + 2,
             baths: i === 0 && startId === 1 ? 4 : Math.floor(Math.random() * 3) + 2,
-            parking: i === 0 && startId === 1 ? 4 : Math.floor(Math.random() * 2) + 1,
+            garage: i === 0 && startId === 1 ? 2 : Math.floor(Math.random() * 2) + 1,
+            areaSqm: i === 0 && startId === 1 ? 350 : Math.floor(Math.random() * 300) + 100,
             priceGHS: i === 0 && startId === 1 ? 1830055 : Math.floor(Math.random() * 2000000) + 500000,
             priceUSD: i === 0 && startId === 1 ? 150000 : Math.floor(Math.random() * 150000) + 40000,
         });
@@ -54,7 +55,8 @@ const generateProperties = (startId: number, count: number): Property[] => {
             name: 'Lakeside Estate',
             beds: 3,
             baths: 4,
-            parking: 4,
+            garage: 2,
+            areaSqm: 350,
             priceGHS: 1830055,
             priceUSD: 150000,
         };
@@ -63,7 +65,7 @@ const generateProperties = (startId: number, count: number): Property[] => {
 }
 
 
-export const featuredProperties: Property[] = generateProperties(1, 6);
+export const featuredProperties: Property[] = generateProperties(1, 6).map(p => ({ ...p, isPremium: true }));
 export const latestProperties: Property[] = generateProperties(7, 6);
 
 

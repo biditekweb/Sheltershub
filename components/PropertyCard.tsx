@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Property } from '../types';
-import { BedIcon, BathIcon, ParkingIcon, HeartIcon } from './icons/PropertyIcons';
+import { BedIcon, BathIcon, GarageIcon, HeartIcon } from './icons/PropertyIcons';
 
 interface PropertyCardProps {
   property: Property;
@@ -43,7 +43,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
 
         {property.isPremium && (
           <span className="absolute bottom-4 right-4 bg-[#F9A826] text-white text-sm font-semibold px-4 py-1.5 rounded-md shadow">
-            Premium
+            Featured
           </span>
         )}
       </div>
@@ -51,31 +51,36 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
       <div className="p-5">
         <div className="flex justify-between items-center mb-2">
           <p className="text-sm text-gray-500">{property.propertyType}</p>
-          <a href="#" className="text-sm text-gray-800 font-medium hover:text-brand-blue">Quick look</a>
         </div>
 
         <h3 className="font-bold text-xl text-gray-900 truncate mb-4">{property.name}</h3>
         
-        <div className="flex items-start text-center text-sm text-gray-500 mb-4">
-            <div className="flex-1 text-left pr-3">
-                <p>Bedrooms</p>
-                <div className="flex items-center gap-2 mt-1 text-base">
-                <BedIcon />
-                <span className="font-bold text-gray-800">{property.beds}</span>
+        <div className="flex items-start mb-4">
+            <div className="flex flex-col items-start">
+                <span className="text-xs text-gray-500">Bedrooms</span>
+                <div className="flex items-center gap-1 mt-1">
+                    <span className="font-bold text-gray-800 text-base">{property.beds}</span>
+                    <BedIcon />
                 </div>
             </div>
-            <div className="flex-1 text-left border-l border-gray-200 px-3">
-                <p>Bathrooms</p>
-                <div className="flex items-center gap-2 mt-1 text-base">
-                <BathIcon />
-                <span className="font-bold text-gray-800">{property.baths}</span>
+
+            <span className="text-gray-300 text-2xl font-light mx-4">|</span>
+
+            <div className="flex flex-col items-start">
+                <span className="text-xs text-gray-500">Bathrooms</span>
+                <div className="flex items-center gap-1 mt-1">
+                    <span className="font-bold text-gray-800 text-base">{property.baths}</span>
+                    <BathIcon />
                 </div>
             </div>
-            <div className="flex-1 text-left border-l border-gray-200 pl-3">
-                <p>Parking</p>
-                <div className="flex items-center gap-2 mt-1 text-base">
-                <ParkingIcon />
-                <span className="font-bold text-gray-800">{property.parking}</span>
+
+            <span className="text-gray-300 text-2xl font-light mx-4">|</span>
+
+            <div className="flex flex-col items-start">
+                <span className="text-xs text-gray-500">Garage</span>
+                <div className="flex items-center gap-1 mt-1">
+                    <span className="font-bold text-gray-800 text-base">{property.garage}</span>
+                    <GarageIcon />
                 </div>
             </div>
         </div>

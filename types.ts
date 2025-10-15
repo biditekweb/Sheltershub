@@ -14,7 +14,8 @@ export interface Property {
   name: string;
   beds: number;
   baths: number;
-  parking: number;
+  garage: number;
+  areaSqm: number;
   priceGHS: number;
   priceUSD: number;
 }

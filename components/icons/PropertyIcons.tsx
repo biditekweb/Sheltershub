@@ -16,12 +16,15 @@ export const BathIcon: React.FC = () => (
     </svg>
 );
 
-export const ParkingIcon: React.FC = () => (
+export const GarageIcon: React.FC = () => (
     <svg xmlns="http://www.w3.org/2000/svg" className={iconClass} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5a1.5 1.5 0 103 0 1.5 1.5 0 00-3 0zM16.5 19.5a1.5 1.5 0 103 0 1.5 1.5 0 00-3 0z" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 12.75V15h13.5v-2.25" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M18.75 6H5.25C4.56 6 4.5 6.56 4.5 7.25v5.5" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 6l3-3h3l3 3" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h6M9 11.25h6M9 15.75h6" />
+    </svg>
+);
+
+export const AreaIcon: React.FC = () => (
+     <svg xmlns="http://www.w3.org/2000/svg" className={iconClass} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
     </svg>
 );
 
