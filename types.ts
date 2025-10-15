@@ -1,4 +1,3 @@
-
 export enum PropertyStatus {
   ForSale = 'For Sale',
   ForRent = 'For Rent',
@@ -7,12 +6,15 @@ export enum PropertyStatus {
 
 export interface Property {
   id: number;
-  image: string;
+  images: string[];
   status: PropertyStatus;
+  daysAgo: number;
+  isPremium: boolean;
+  propertyType: string;
   name: string;
-  location: string;
-  price: string;
-  sqft: number;
   beds: number;
   baths: number;
+  parking: number;
+  priceGHS: number;
+  priceUSD: number;
 }

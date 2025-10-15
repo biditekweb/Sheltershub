@@ -1,4 +1,3 @@
-
 import { Property, PropertyStatus } from './types';
 
 export const navLinks = [
@@ -24,23 +23,49 @@ export const adSliderImages = [
 ];
 
 
-export const featuredProperties: Property[] = [
-  { id: 1, image: 'https://picsum.photos/400/300?random=4', status: PropertyStatus.ForSale, name: 'Comfortable Apartment in Palace', location: 'Popular Properties', price: 'From $20k', sqft: 1200, beds: 2, baths: 2 },
-  { id: 2, image: 'https://picsum.photos/400/300?random=5', status: PropertyStatus.ForRent, name: 'Comfortable Apartment in Palace', location: 'Popular Properties', price: '$563/month', sqft: 1200, beds: 2, baths: 2 },
-  { id: 3, image: 'https://picsum.photos/400/300?random=6', status: PropertyStatus.ForSale, name: 'Comfortable Apartment in Palace', location: 'Popular Properties', price: 'From $20k', sqft: 1200, beds: 2, baths: 2 },
-  { id: 4, image: 'https://picsum.photos/400/300?random=7', status: PropertyStatus.ForRent, name: 'Comfortable Apartment in Palace', location: 'Popular Properties', price: '$563/month', sqft: 1200, beds: 2, baths: 2 },
-  { id: 5, image: 'https://picsum.photos/400/300?random=8', status: PropertyStatus.ForSale, name: 'Comfortable Apartment in Palace', location: 'Popular Properties', price: 'From $20k', sqft: 1200, beds: 2, baths: 2 },
-  { id: 6, image: 'https://picsum.photos/400/300?random=9', status: PropertyStatus.ForSale, name: 'Comfortable Apartment in Palace', location: 'Popular Properties', price: 'From $20k', sqft: 1200, beds: 2, baths: 2 },
-];
+const generateProperties = (startId: number, count: number): Property[] => {
+    const properties: Property[] = [];
+    for (let i = 0; i < count; i++) {
+        const isForSale = Math.random() > 0.5;
+        properties.push({
+            id: startId + i,
+            images: [`https://picsum.photos/400/300?random=${startId + i}`],
+            status: isForSale ? PropertyStatus.ForSale : PropertyStatus.ForRent,
+            daysAgo: Math.floor(Math.random() * 30) + 1,
+            isPremium: Math.random() > 0.7,
+            propertyType: 'House',
+            name: i === 0 && startId === 1 ? 'Lakeside Estate' : 'Modern Family Home',
+            beds: i === 0 && startId === 1 ? 3 : Math.floor(Math.random() * 3) + 2,
+            baths: i === 0 && startId === 1 ? 4 : Math.floor(Math.random() * 3) + 2,
+            parking: i === 0 && startId === 1 ? 4 : Math.floor(Math.random() * 2) + 1,
+            priceGHS: i === 0 && startId === 1 ? 1830055 : Math.floor(Math.random() * 2000000) + 500000,
+            priceUSD: i === 0 && startId === 1 ? 150000 : Math.floor(Math.random() * 150000) + 40000,
+        });
+    }
+    // Ensure the first property matches the design reference exactly
+    if (startId === 1) {
+        properties[0] = {
+            id: 1,
+            images: ['https://picsum.photos/400/300?random=4', 'https://picsum.photos/400/300?random=5'],
+            status: PropertyStatus.ForSale,
+            daysAgo: 15,
+            isPremium: true,
+            propertyType: 'House',
+            name: 'Lakeside Estate',
+            beds: 3,
+            baths: 4,
+            parking: 4,
+            priceGHS: 1830055,
+            priceUSD: 150000,
+        };
+    }
+    return properties;
+}
 
-export const latestProperties: Property[] = [
-    { id: 7, image: 'https://picsum.photos/400/300?random=10', status: PropertyStatus.ForSale, name: 'Comfortable Apartment in Palace', location: 'Popular Properties', price: 'From $20k', sqft: 1200, beds: 2, baths: 2 },
-    { id: 8, image: 'https://picsum.photos/400/300?random=11', status: PropertyStatus.ForRent, name: 'Comfortable Apartment in Palace', location: 'Popular Properties', price: '$563/month', sqft: 1200, beds: 2, baths: 2 },
-    { id: 9, image: 'https://picsum.photos/400/300?random=12', status: PropertyStatus.ForSale, name: 'Comfortable Apartment in Palace', location: 'Popular Properties', price: 'From $20k', sqft: 1200, beds: 2, baths: 2 },
-    { id: 10, image: 'https://picsum.photos/400/300?random=13', status: PropertyStatus.ForRent, name: 'Comfortable Apartment in Palace', location: 'Popular Properties', price: '$563/month', sqft: 1200, beds: 2, baths: 2 },
-    { id: 11, image: 'https://picsum.photos/400/300?random=14', status: PropertyStatus.ForSale, name: 'Comfortable Apartment in Palace', location: 'Popular Properties', price: 'From $20k', sqft: 1200, beds: 2, baths: 2 },
-    { id: 12, image: 'https://picsum.photos/400/300?random=15', status: PropertyStatus.ForSale, name: 'Comfortable Apartment in Palace', location: 'Popular Properties', price: 'From $20k', sqft: 1200, beds: 2, baths: 2 },
-];
+
+export const featuredProperties: Property[] = generateProperties(1, 6);
+export const latestProperties: Property[] = generateProperties(7, 6);
+
 
 export const footerLinks = {
     'Property Type': [
