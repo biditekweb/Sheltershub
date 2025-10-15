@@ -11,7 +11,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   return (
-    <div className="bg-white rounded-xl border border-gray-200 overflow-hidden group transition-shadow duration-300 hover:shadow-lg">
+    <div className="bg-white rounded-xl border border-gray-200 overflow-hidden group transition-shadow duration-300 shadow-sm hover:shadow">
       <div className="relative">
         <img src={property.images[currentImageIndex]} alt={property.name} className="w-full h-56 object-cover" />
 
