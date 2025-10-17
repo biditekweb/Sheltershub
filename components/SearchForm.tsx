@@ -89,7 +89,7 @@ const SearchForm: React.FC = () => {
         <SearchPill text="FOR SALE" active={activeTab === 'For Sale'} onClick={() => setActiveTab('For Sale')} />
         <SearchPill text="LAND" active={activeTab === 'Land'} onClick={() => setActiveTab('Land')} />
       </div>
-      <div className="bg-white p-6 rounded-b-lg rounded-r-lg shadow-lg">
+      <div className="bg-[#082956] p-6 rounded-b-lg rounded-r-lg shadow-lg">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
             <CustomSelect placeholder="Property Type" />
             <CustomSelect placeholder="Region" />
