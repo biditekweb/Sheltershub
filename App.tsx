@@ -7,7 +7,7 @@ import PropertyList from './components/PropertyList';
 import AdvertSpace from './components/AdvertSpace';
 import ImageSlider from './components/ImageSlider';
 import Footer from './components/Footer';
-import { featuredProperties, latestProperties, adSliderImages } from './constants';
+import { featuredProperties, latestProperties, adSliderImages, wideAdSliderImages } from './constants';
 
 const App: React.FC = () => {
   return (
@@ -20,6 +20,9 @@ const App: React.FC = () => {
       <main className="container mx-auto px-4 py-8">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-9">
+            <div className="my-8 aspect-video">
+              <ImageSlider images={wideAdSliderImages} />
+            </div>
             <AdvertSpace className="my-8 h-24" />
             <PropertyList title="Featured Properties" properties={featuredProperties} />
             <AdvertSpace className="my-8 h-24" />

@@ -23,6 +23,12 @@ export const adSliderImages = [
     'https://picsum.photos/800/400?random=22',
 ];
 
+export const wideAdSliderImages = [
+    'https://picsum.photos/1600/900?random=31',
+    'https://picsum.photos/1600/900?random=32',
+    'https://picsum.photos/1600/900?random=33',
+];
+
 
 const generateProperties = (startId: number, count: number): Property[] => {
     const properties: Property[] = [];
