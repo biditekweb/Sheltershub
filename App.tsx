@@ -36,6 +36,12 @@ const App: React.FC = () => {
             <div className="bg-red-600 aspect-video flex items-center justify-center p-4 rounded-lg">
                 <span className="text-white font-bold text-center text-xl">YouTube Embed<br/>16 by 9 ratio</span>
             </div>
+            <AdvertSpace className="h-60" text="Advert Space by Real Estate Company 1 by 1 ratio size" />
+            <AdvertSpace className="h-96" text="Advert Space by Real Estate Company 9 by 16 ratio size" />
+            <AdvertSpace className="h-60" text="Advert Space by Real Estate Company 1 by 1 ratio size" />
+            <div className="bg-red-600 aspect-video flex items-center justify-center p-4 rounded-lg">
+                <span className="text-white font-bold text-center text-xl">YouTube Embed<br/>16 by 9 ratio</span>
+            </div>
           </aside>
         </div>
       </main>
