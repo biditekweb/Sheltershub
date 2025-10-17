@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 const SearchPill: React.FC<{ text: string; active: boolean; onClick: () => void }> = ({ text, active, onClick }) => (
   <button
     onClick={onClick}
-    className={`px-6 py-3 text-sm font-semibold rounded-t-lg transition-colors focus:outline-none ${
-      active ? 'bg-[#236da8] text-white' : 'bg-[#ff8d2a] text-white hover:brightness-95'
+    className={`px-6 py-3 text-sm font-semibold rounded-t-lg transition-colors focus:outline-none text-white ${
+      active ? 'bg-[#082956]' : 'bg-[#ff8d2a] hover:bg-[#236da8]'
     }`}
   >
     {text}
