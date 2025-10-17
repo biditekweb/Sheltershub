@@ -79,20 +79,26 @@ export const latestProperties: Property[] = generateProperties(7, 6);
 
 
 export const footerLinks = {
-    'Property Type': [
-        { name: 'Residential Property', href: '#' },
-        { name: 'House', href: '#' },
-        { name: 'Apartment / Condos', href: '#' },
-        { name: 'Land', href: '#' },
-        { name: 'Townhouse', href: '#' },
-    ],
-    'Commercial Property': [
-        { name: 'Apartment / Condos', href: '#' },
-        { name: 'Land', href: '#' },
-        { name: 'Townhouse', href: '#' },
-        { name: 'Offices', href: '#' },
-        { name: 'Industrial & Warehouse', href: '#' },
-    ],
+    'Property Type': {
+        'Residential': [
+            { name: 'House for Rent', href: '#' },
+            { name: 'House for Sale', href: '#' },
+            { name: 'Apartment/Condos for Rent', href: '#' },
+            { name: 'Apartment/Condos for Sale', href: '#' },
+            { name: 'Land for Sale', href: '#' },
+            { name: 'Townhouse for Rent', href: '#' },
+            { name: 'Townhouse for Sale', href: '#' },
+        ],
+        'Commercial': [
+            { name: 'Office for Rent', href: '#' },
+            { name: 'Office for Sale', href: '#' },
+            { name: 'Warehouse', href: '#' },
+            { name: 'Industry', href: '#' },
+            { name: 'Land for Sale', href: '#' },
+            { name: 'Shop for Rent', href: '#' },
+            { name: 'Shop for Sale', href: '#' },
+        ]
+    },
     'About Us': [
         { name: 'About Sheltershub', href: '#' },
         { name: 'Terms of Use', href: '#' },

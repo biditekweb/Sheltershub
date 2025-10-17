@@ -25,13 +25,18 @@ const Header: React.FC = () => {
       {/* Middle Bar: Logo and Advert */}
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Logo />
-        <div className="hidden lg:flex bg-gray-200 items-center justify-center w-full max-w-2xl h-20">
-            <span className="text-black text-4xl tracking-wide">Advert Space</span>
+        <div className="hidden md:flex bg-gray-300 items-center justify-center w-full max-w-md lg:max-w-2xl h-20 mx-4 rounded-lg">
+            <span className="text-gray-600 font-semibold text-lg text-center">Advert Space by Google</span>
+        </div>
+        <div className="lg:hidden">
+            <button onClick={() => setMenuOpen(!menuOpen)} className="text-gray-600 focus:outline-none" aria-label="Open menu">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </div>
       </div>
 
       {/* Bottom Bar: Main Navigation */}
-      <div className="border-t border-b border-gray-200">
+      <div className="border-t border-b border-gray-200 hidden lg:block">
         <div className="container mx-auto px-4 h-14 flex justify-center items-center">
              <nav className="hidden lg:flex items-center space-x-8">
                 {navLinks.map((link) => (
@@ -40,11 +45,6 @@ const Header: React.FC = () => {
                 </a>
                 ))}
             </nav>
-            <div className="lg:hidden w-full flex justify-end">
-                <button onClick={() => setMenuOpen(!menuOpen)} className="text-gray-600 focus:outline-none" aria-label="Open menu">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
         </div>
       </div>
 
