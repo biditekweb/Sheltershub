@@ -7,10 +7,7 @@ export const BedIcon: React.FC = () => (
 );
 
 export const BathIcon: React.FC = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className={iconClass} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v16.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V3.75M9 8.25h6" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 18a1.5 1.5 0 001.5-1.5v-3a1.5 1.5 0 00-3 0v3a1.5 1.5 0 001.5 1.5z" />
-    </svg>
+    <img src="https://i.ibb.co/60BSG1pR/bathroom.png" alt="Bathroom icon" className="w-5 h-5" />
 );
 
 export const GarageIcon: React.FC = () => (
