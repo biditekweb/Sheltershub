@@ -42,7 +42,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
         )}
 
         {property.isPremium && (
-          <span className="absolute bottom-4 right-4 bg-[#F9A826] text-white text-sm font-semibold px-4 py-1.5 rounded-md shadow">
+          <span className="absolute bottom-4 right-4 bg-[#ff8d2a] text-white text-sm font-semibold px-4 py-1.5 rounded-md shadow">
             Featured
           </span>
         )}
