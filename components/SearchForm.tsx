@@ -13,7 +13,7 @@ const SearchPill: React.FC<{ text: string; active: boolean; onClick: () => void 
 
 const CustomSelect: React.FC<{ placeholder: string }> = ({ placeholder }) => (
     <div className="relative w-full bg-gray-100 rounded">
-        <select className="w-full p-3 bg-transparent text-gray-500 appearance-none focus:outline-none">
+        <select className="w-full py-1.5 px-3 bg-transparent text-gray-500 appearance-none focus:outline-none">
             <option>{placeholder}</option>
             <option>Option 1</option>
             <option>Option 2</option>
@@ -55,7 +55,7 @@ const NumericInput: React.FC<{ placeholder: string }> = ({ placeholder }) => {
         value={value}
         onChange={handleChange}
         placeholder={placeholder}
-        className="w-full p-3 bg-transparent text-gray-500 appearance-none focus:outline-none [-moz-appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none pr-8"
+        className="w-full py-1.5 px-3 bg-transparent text-gray-500 appearance-none focus:outline-none [-moz-appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none pr-8"
         aria-label={placeholder}
       />
       <div className="absolute inset-y-0 right-0 flex flex-col items-center justify-center px-2 text-gray-700">
@@ -101,7 +101,7 @@ const SearchForm: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <NumericInput placeholder="No. of Bedrooms" />
             <NumericInput placeholder="Area Size" />
-            <button className="w-full bg-brand-blue text-white font-bold py-3 px-4 rounded hover:bg-brand-blue-dark transition-colors md:col-span-2 lg:col-span-1">
+            <button className="w-full bg-brand-blue text-white font-bold py-1.5 px-4 rounded hover:bg-brand-blue-dark transition-colors md:col-span-2 lg:col-span-1">
                 Search
             </button>
         </div>
