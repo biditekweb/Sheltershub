@@ -1,32 +1,8 @@
 import React, { useState } from 'react';
 import { navLinks } from '../constants';
 
-const SheltershubLogoIcon: React.FC = () => (
-    <svg width="48" height="42" viewBox="0 0 50 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g>
-            {/* Top Block */}
-            <path d="M15 0 L35 0 L30 8 L10 8 Z" fill="#0A2B4C"/>
-            <path d="M10 8 L30 8 L25 16 L5 16 Z" fill="#CBD5E1"/>
-            
-            {/* Bottom Block */}
-            <path d="M30 22 L50 22 L45 30 L25 30 Z" fill="#0A2B4C"/>
-            <path d="M25 30 L45 30 L40 38 L20 38 Z" fill="#CBD5E1"/>
-        </g>
-    </svg>
-);
-
-
 const Logo: React.FC = () => (
-  <div className="flex items-center space-x-3">
-    <SheltershubLogoIcon />
-    <div>
-      <h1 className="text-3xl font-bold tracking-tight">
-        <span className="text-gray-900">Sheltershub</span>
-        <span className="text-brand-orange">.com</span>
-      </h1>
-      <p className="text-xs text-brand-blue mt-1">Ghana's No. 1 Real Estate Marketplace</p>
-    </div>
-  </div>
+    <img src="https://i.ibb.co/4RJRrttb/Sheltershub-Logo-png.png" alt="Sheltershub Logo" className="h-[4.5rem] w-auto" />
 );
 
 const Header: React.FC = () => {
