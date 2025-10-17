@@ -15,7 +15,9 @@ const App: React.FC = () => {
       <Header />
       <Hero />
       <div className="container mx-auto px-4 relative z-10 -mt-11">
-        <SearchForm />
+        <div className="w-full lg:w-3/4 mx-auto">
+          <SearchForm />
+        </div>
       </div>
       <main className="container mx-auto px-4 py-8">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8">
