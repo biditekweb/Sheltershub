@@ -2,6 +2,7 @@ import { Property, PropertyStatus } from './types';
 
 export const navLinks = [
   { name: 'Home', href: '#' },
+  { name: 'All Properties', href: '#' },
   { name: 'For Rent', href: '#' },
   { name: 'For Sale', href: '#' },
   { name: 'Agency', href: '#' },

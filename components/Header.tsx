@@ -47,9 +47,9 @@ const Header: React.FC = () => {
       </div>
       
       {/* Middle Bar: Logo and Advert */}
-      <div className="container mx-auto px-4 py-5 flex justify-between items-center">
+      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Logo />
-        <div className="hidden lg:flex bg-gray-200 items-center justify-center w-full max-w-2xl h-24">
+        <div className="hidden lg:flex bg-gray-200 items-center justify-center w-full max-w-2xl h-20">
             <span className="text-black text-4xl tracking-wide">Advert Space</span>
         </div>
       </div>

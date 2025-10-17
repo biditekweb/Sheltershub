@@ -22,7 +22,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
 
         <button 
           onClick={() => setIsFavorited(!isFavorited)}
-          className="absolute top-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full text-gray-700 hover:text-red-500 hover:bg-white transition-all" 
+          className="absolute top-4 right-4 p-2 rounded-full text-white hover:text-red-500 hover:bg-white/20 transition-all" 
           aria-label="Add to favorites"
         >
           <HeartIcon isFilled={isFavorited} />
