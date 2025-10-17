@@ -32,11 +32,12 @@ export const wideAdSliderImages = [
 
 const generateProperties = (startId: number, count: number): Property[] => {
     const properties: Property[] = [];
+    const newImageUrl = 'https://i.ibb.co/NnZzSLFd/Sample-Card-Image.jpg';
     for (let i = 0; i < count; i++) {
         const isForSale = Math.random() > 0.5;
         properties.push({
             id: startId + i,
-            images: [`https://picsum.photos/400/300?random=${startId + i}`],
+            images: [newImageUrl],
             status: isForSale ? PropertyStatus.ForSale : PropertyStatus.ForRent,
             daysAgo: Math.floor(Math.random() * 30) + 1,
             isPremium: Math.random() > 0.7,
@@ -54,7 +55,7 @@ const generateProperties = (startId: number, count: number): Property[] => {
     if (startId === 1) {
         properties[0] = {
             id: 1,
-            images: ['https://picsum.photos/400/300?random=4', 'https://picsum.photos/400/300?random=5'],
+            images: [newImageUrl],
             status: PropertyStatus.ForSale,
             daysAgo: 15,
             isPremium: true,
