@@ -20,6 +20,7 @@ const App: React.FC = () => {
       <main className="container mx-auto px-4 py-8">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-9">
+            <AdvertSpace className="mt-8 mb-8 lg:mt-0 h-24" />
             <div className="my-8 aspect-video">
               <ImageSlider images={wideAdSliderImages} />
             </div>
