@@ -11,9 +11,7 @@ export const BathIcon: React.FC = () => (
 );
 
 export const GarageIcon: React.FC = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className={iconClass} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h6M9 11.25h6M9 15.75h6" />
-    </svg>
+    <img src="https://i.ibb.co/5hg25082/garage.png" alt="Garage icon" className="w-5 h-5" />
 );
 
 export const AreaIcon: React.FC = () => (
