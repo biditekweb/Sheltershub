@@ -3,10 +3,7 @@ import React from 'react';
 const iconClass = "w-5 h-5 text-gray-600";
 
 export const BedIcon: React.FC = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className={iconClass} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M21 7.5V18M3 18V7.5M3 7.5h18V5.25A2.25 2.25 0 0018.75 3h-13.5A2.25 2.25 0 003 5.25v2.25z" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 9.75V12h13.5V9.75" />
-    </svg>
+    <img src="https://i.ibb.co/S4DZwNyz/bed.png" alt="Bed icon" className="w-5 h-5" />
 );
 
 export const BathIcon: React.FC = () => (
