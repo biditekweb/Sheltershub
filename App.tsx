@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import SearchForm from './components/SearchForm';
 import PropertyList from './components/PropertyList';
 import AdvertSpace from './components/AdvertSpace';
 import ImageSlider from './components/ImageSlider';
@@ -13,6 +14,9 @@ const App: React.FC = () => {
     <div className="bg-gray-50 min-h-screen font-sans">
       <Header />
       <Hero />
+      <div className="container mx-auto px-4 relative z-10 -mt-11">
+        <SearchForm />
+      </div>
       <main className="container mx-auto px-4 py-8">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-9">

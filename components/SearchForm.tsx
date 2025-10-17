@@ -1,11 +1,10 @@
-
 import React, { useState } from 'react';
 
 const SearchPill: React.FC<{ text: string; active: boolean; onClick: () => void }> = ({ text, active, onClick }) => (
   <button
     onClick={onClick}
-    className={`px-6 py-2 text-sm font-semibold rounded-t-lg transition-colors ${
-      active ? 'bg-white text-brand-blue' : 'bg-brand-blue text-white hover:bg-opacity-80'
+    className={`px-6 py-3 text-sm font-semibold rounded-t-lg transition-colors focus:outline-none ${
+      active ? 'bg-[#236da8] text-white' : 'bg-[#ff8d2a] text-white hover:brightness-95'
     }`}
   >
     {text}
@@ -20,7 +19,7 @@ const CustomSelect: React.FC<{ placeholder: string }> = ({ placeholder }) => (
             <option>Option 2</option>
         </select>
         <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-            <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+            <svg className="fill-current h-4 w-4" xmlns="http://www.w.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
         </div>
     </div>
 );
@@ -35,7 +34,7 @@ const SearchForm: React.FC = () => {
         <SearchPill text="FOR SALE" active={activeTab === 'For Sale'} onClick={() => setActiveTab('For Sale')} />
         <SearchPill text="LAND" active={activeTab === 'Land'} onClick={() => setActiveTab('Land')} />
       </div>
-      <div className="bg-white p-6 rounded-b-lg rounded-r-lg shadow-2xl">
+      <div className="bg-white p-6 rounded-b-lg rounded-r-lg shadow-lg">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
             <CustomSelect placeholder="Property Type" />
             <CustomSelect placeholder="Region" />
@@ -45,10 +44,9 @@ const SearchForm: React.FC = () => {
             <CustomSelect placeholder="Min. Price" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div className="lg:col-span-2">
-                 <CustomSelect placeholder="No. of Bedrooms" />
-            </div>
-            <button className="w-full bg-brand-blue text-white font-bold py-3 px-4 rounded hover:bg-brand-blue-dark transition-colors">
+            <CustomSelect placeholder="No. of Bedrooms" />
+            <CustomSelect placeholder="Area Size" />
+            <button className="w-full bg-brand-blue text-white font-bold py-3 px-4 rounded hover:bg-brand-blue-dark transition-colors md:col-span-2 lg:col-span-1">
                 Search
             </button>
         </div>
