@@ -13,20 +13,21 @@ export const navLinks = [
 ];
 
 export const heroImages = [
-  'https://picsum.photos/1200/600?random=1',
-  'https://picsum.photos/1200/600?random=2',
-  'https://picsum.photos/1200/600?random=3',
+  'https://i.ibb.co/dwXy9qMp/Carousel-Image-1.jpg',
+  'https://i.ibb.co/jvXSSRTm/Carousel-Image-2.jpg',
+  'https://i.ibb.co/0RBKCXM3/Carousel-Image-3.jpg',
 ];
 
 export const adSliderImages = [
-    'https://picsum.photos/800/400?random=21',
-    'https://picsum.photos/800/400?random=22',
+    'https://i.ibb.co/dwXy9qMp/Carousel-Image-1.jpg',
+    'https://i.ibb.co/jvXSSRTm/Carousel-Image-2.jpg',
+    'https://i.ibb.co/0RBKCXM3/Carousel-Image-3.jpg',
 ];
 
 export const wideAdSliderImages = [
-    'https://picsum.photos/1600/900?random=31',
-    'https://picsum.photos/1600/900?random=32',
-    'https://picsum.photos/1600/900?random=33',
+    'https://i.ibb.co/dwXy9qMp/Carousel-Image-1.jpg',
+    'https://i.ibb.co/jvXSSRTm/Carousel-Image-2.jpg',
+    'https://i.ibb.co/0RBKCXM3/Carousel-Image-3.jpg',
 ];
 
 
