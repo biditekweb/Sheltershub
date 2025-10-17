@@ -24,6 +24,61 @@ const CustomSelect: React.FC<{ placeholder: string }> = ({ placeholder }) => (
     </div>
 );
 
+const NumericInput: React.FC<{ placeholder: string }> = ({ placeholder }) => {
+  const [value, setValue] = useState<number | ''>('');
+
+  const handleIncrement = () => {
+    setValue(prev => (typeof prev === 'number' ? prev + 1 : 1));
+  };
+
+  const handleDecrement = () => {
+    setValue(prev => (typeof prev === 'number' && prev > 0 ? prev - 1 : 0));
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const val = e.target.value;
+    if (val === '') {
+      setValue('');
+    } else {
+      const num = parseInt(val, 10);
+      if (!isNaN(num)) {
+        setValue(num >= 0 ? num : 0);
+      }
+    }
+  };
+
+  return (
+    <div className="relative w-full bg-gray-100 rounded">
+      <input
+        type="number"
+        min="0"
+        value={value}
+        onChange={handleChange}
+        placeholder={placeholder}
+        className="w-full p-3 bg-transparent text-gray-500 appearance-none focus:outline-none [-moz-appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none pr-8"
+        aria-label={placeholder}
+      />
+      <div className="absolute inset-y-0 right-0 flex flex-col items-center justify-center px-2 text-gray-700">
+        <button 
+          onClick={handleIncrement} 
+          className="h-1/2 w-full flex items-center justify-center text-gray-600 hover:text-gray-900" 
+          aria-label={`Increment ${placeholder}`}
+        >
+          <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+        </button>
+        <button 
+          onClick={handleDecrement} 
+          className="h-1/2 w-full flex items-center justify-center text-gray-600 hover:text-gray-900" 
+          aria-label={`Decrement ${placeholder}`}
+        >
+          <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </button>
+      </div>
+    </div>
+  );
+};
+
+
 const SearchForm: React.FC = () => {
   const [activeTab, setActiveTab] = useState('For Rent');
 
@@ -39,13 +94,13 @@ const SearchForm: React.FC = () => {
             <CustomSelect placeholder="Property Type" />
             <CustomSelect placeholder="Region" />
             <CustomSelect placeholder="City" />
-            <CustomSelect placeholder="No. of Bathrooms" />
-            <CustomSelect placeholder="Max. Price" />
-            <CustomSelect placeholder="Min. Price" />
+            <NumericInput placeholder="No. of Bathrooms" />
+            <NumericInput placeholder="Max. Price" />
+            <NumericInput placeholder="Min. Price" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <CustomSelect placeholder="No. of Bedrooms" />
-            <CustomSelect placeholder="Area Size" />
+            <NumericInput placeholder="No. of Bedrooms" />
+            <NumericInput placeholder="Area Size" />
             <button className="w-full bg-brand-blue text-white font-bold py-3 px-4 rounded hover:bg-brand-blue-dark transition-colors md:col-span-2 lg:col-span-1">
                 Search
             </button>
