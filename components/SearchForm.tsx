@@ -19,7 +19,7 @@ const CustomSelect: React.FC<{ placeholder: string }> = ({ placeholder }) => (
             <option>Option 2</option>
         </select>
         <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-            <svg className="fill-current h-4 w-4" xmlns="http://www.w.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+            <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
         </div>
     </div>
 );
@@ -29,7 +29,7 @@ const SearchForm: React.FC = () => {
 
   return (
     <div className="w-full">
-      <div className="flex">
+      <div className="flex gap-[0.4px]">
         <SearchPill text="FOR RENT" active={activeTab === 'For Rent'} onClick={() => setActiveTab('For Rent')} />
         <SearchPill text="FOR SALE" active={activeTab === 'For Sale'} onClick={() => setActiveTab('For Sale')} />
         <SearchPill text="LAND" active={activeTab === 'Land'} onClick={() => setActiveTab('Land')} />
